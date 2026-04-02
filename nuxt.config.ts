@@ -1,5 +1,9 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import { defineNuxtConfig } from "nuxt/config";
+
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-15',
-  devtools: { enabled: true }
-})
+  runtimeConfig: {
+    public: {
+      repositoryType: import.meta.env.NUXT_PUBLIC_REPOSITORY_TYPE || "memory",
+    },
+  },
+});

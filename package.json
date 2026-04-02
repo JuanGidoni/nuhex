@@ -5,11 +5,14 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "dev:mock": "NUXT_PUBLIC_REPOSITORY_TYPE=memory nuxt dev",
+    "dev:api": "NUXT_PUBLIC_REPOSITORY_TYPE=api nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@tanstack/vue-query": "^5.96.1",
     "nuxt": "^4.4.2",
     "vue": "^3.5.31",
     "vue-router": "^5.0.4"
